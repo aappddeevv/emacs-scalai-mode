@@ -1,15 +1,15 @@
-;;; scala-mode.el --- Major mode for editing Scala
+;;; scalai-mode.el --- Major mode for editing Scala with significant indentation syntax.
 
 ;; Copyright (c) 2012 Heikki Vesalainen
 
-;; Homepage: https://github.com/ensime/emacs-scala-mode
+;; Homepage: https://github.com/aappddeevv/emacs-scalai-mode
 ;; Keywords: languages
-;; Package-Version:  0.23
+;; Package-Version:  0.1.0
 ;; Package-Requires: ()
 
 ;;; Commentary:
 ;;
-;;  Documentation at http://ensime.org/editors/emacs/scala-mode/
+;;  Documentation at https://github.com/aappddevv/emacs-scalai-mode
 ;;
 ;;; Code:
 
@@ -173,10 +173,10 @@ When started, runs `scalai-mode:hook'.
 
 ;; Attach .scala files to the scala-mode
 ;;;###autoload
-(progn
-  (add-to-list 'auto-mode-alist
-               '("\\.\\(scala\\|sbt\\)\\'" . scalai-mode))
-  (modify-coding-system-alist 'file "\\.\\(scala\\|sbt\\)\\'" 'utf-8))
+;(progn
+;  (add-to-list 'auto-mode-alist
+;               '("\\.\\(scala\\|sbt\\)\\'" . scalai-mode))
+;  (modify-coding-system-alist 'file "\\.\\(scala\\|sbt\\)\\'" 'utf-8))
 
 (provide 'scalai-mode)
-;;; scala-mode.el ends here
+;;; scalai-mode.el ends here

@@ -22,14 +22,23 @@ significantly enhance it.
 In your init.el you can add a package load that forces all `*.scala` files to
 use this formatting or you can use it on a per-file basis. dotty requires that
 all the sources compiled in a project use the same formatting scheme. If you
-want to keep part of your code using the old syntax, put that code in a separate
-project.
+want to keep part of your code using the old syntax, put that scala code in a
+separate project.
+
+Clone the repo into `~/.emacs.d/scalai-mode` by running:
+
+```sh
+cd ~/.emacs.el
+git clone https://github.com/aappddeeevv/emacs-scalai-mode.git
+```
+
+Then change your `init.el` as follows:
 
 ```lisp
 (use-package scalai-mode
   :diminish scalai-mode
-  ;; use :pin melpa if you install from melpa
-  :pin  melpa
+  ;; use :pin melpa if you install from melpa, but this package is not in elpa yet!
+  ;;:pin  melpa
   ;; or place the distribution in ~/.emacs.el/scalai-mode and use :load-path
   :load-path "scalai-mode"
   :mode ("\\.s\\(c\\|scala\\|bt\\)$")
@@ -49,15 +58,21 @@ project.
     ))
 ```
 
-To turn this mode on using a per-file syntax, add this to the top of your
-`*.scala` files:
+To turn this mode on using a per-file basis, add this to the top of your
+`*.scala`.
 
 ```scala
 // -*- mode: scalai -*-
 ```
 
+# Coexistance
+
+If you still have projects that use the old syntax and you need to use the real
+scala mode, you can skip adding the file extensions in use-package above and
+just use the per-file mode setting approach.
+
 # Attribution
 
-The code was taken from http://github.com/ensime/emacs-scala-mode and from the
-existing code for emac's python mode.
+The base code was taken from http://github.com/ensime/emacs-scala-mode and from
+the existing code for emac's python mode.
 
