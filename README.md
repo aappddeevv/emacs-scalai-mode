@@ -32,7 +32,16 @@ cd ~/.emacs.el
 git clone https://github.com/aappddeeevv/emacs-scalai-mode.git
 ```
 
-Then change your `init.el` as follows:
+If you have cask installed, you can
+
+```sh
+cd scalai-mode
+cask build
+```
+
+to generate `.elc` files.
+
+Change your `init.el` file to load it:
 
 ```lisp
 (use-package scalai-mode
