@@ -1035,7 +1035,7 @@ point is not in between the indentation."
   "De-indent current line."
   (interactive "*")
   (when (and (not (bolp))
-           (not (scalai-syntaxcomment-or-string-p))
+           (not (scalai-syntax:comment-or-string-p))
            (= (current-indentation) (current-column)))
       (scala-indent-line t)
       t))
